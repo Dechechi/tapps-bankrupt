@@ -14,4 +14,15 @@ public class Property {
         this.bought = bought;
     }
 
+    public int getSelling_price(){
+        return this.selling_price;
+    }
+
+    public int getLoan_price(){
+        return this.loan_price;
+    }
+
+    public void setOwner(Player owner) {
+        this.owner = owner;
+    }
 }

@@ -16,7 +16,8 @@ public class Dice {
 
     public int runDice(int min, int max){
         Random random = new Random();
-        return random.nextInt(max + 1 - min) + min;
+        this.value = random.nextInt(max + 1 - min) + min;
+        return this.value;
     }
 
     /*public static void main(String arg[]){
@@ -25,7 +26,7 @@ public class Dice {
 
         for (int i =0; i < 100; i++){
             Dice dados = new Dice(1,6);
-            System.out.println("Dado " + i + ": " + dados.value);
+            System.out.println("Dado " + i + ": " + dados.value + " E busquei valor: " + dados.getValue());
         }
     }*/
 
