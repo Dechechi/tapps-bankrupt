@@ -11,12 +11,16 @@ public class Dice {
     public Dice(int min, int max){
         this.min = min;
         this.max = max;
-        this.value = runDice(min, max);
+        this.value = runDice();
     }
 
-    public int runDice(int min, int max){
+    public int runDice(){
         Random random = new Random();
-        this.value = random.nextInt(max + 1 - min) + min;
+        this.value = random.nextInt(this.max + 1 - this.min) + this.min;
+        return this.value;
+    }
+
+    public int getValue() {
         return this.value;
     }
 

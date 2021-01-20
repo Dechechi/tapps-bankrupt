@@ -28,8 +28,8 @@ public class Board {
                 int selling_price = Integer.parseInt(line[0]);
                 int loan_price = Integer.parseInt(line[1]);
 
-                Property property = new Property(null, selling_price, loan_price, false);
                 this.propertiesQtd++;
+                Property property = new Property(selling_price, loan_price, propertiesQtd);
                 board.put(this.propertiesQtd, property);
             }
 
@@ -38,12 +38,30 @@ public class Board {
         }
     }
 
-    public static void main(String[] args) {
-        Board tabuleiro = new Board("gameConfig.txt");
-    }
-
     public int getPropertiesQtd(){
         return this.propertiesQtd;
     }
 
+    public Map<Integer, Property> getBoard() {
+        return board;
+    }
+
+    public void resetBoard(){
+        for (Integer place : board.keySet()){
+            Property property = board.get(place);
+            property.resetProperty();
+        }
+    }
+
+    @Override
+    public String toString() {
+        String st = "{propertiesQtd= " + propertiesQtd + ", board=[";
+        for(Integer place : board.keySet()){
+            st += "\n";
+            Property property = board.get(place);
+            st += property.toString() + ",";
+        }
+        st += "]";
+        return st;
+    }
 }
