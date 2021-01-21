@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-import PurchaseExecution.Purchase;
+import purchase.Purchase;
 
 import java.util.ArrayList;
 import java.util.List;

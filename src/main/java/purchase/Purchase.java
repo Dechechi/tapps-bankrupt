@@ -1,6 +1,6 @@
-package PurchaseExecution;
+package purchase;
 
-import Model.Property;
+import model.Property;
 
 public interface Purchase {
     boolean purchase(Property property, int coins);

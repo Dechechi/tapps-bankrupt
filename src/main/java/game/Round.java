@@ -1,13 +1,13 @@
-package Game;
+package game;
 
-import Model.Board;
-import Model.Player;
-import Model.Property;
-import PurchaseExecution.PurchaseCautious;
-import PurchaseExecution.PurchaseInpulsive;
-import PurchaseExecution.PurchasePicky;
-import PurchaseExecution.PurchaseRandom;
-import Util.Dice;
+import model.Board;
+import model.Player;
+import model.Property;
+import purchase.PurchaseCautious;
+import purchase.PurchaseInpulsive;
+import purchase.PurchasePicky;
+import purchase.PurchaseRandom;
+import util.Dice;
 
 import java.util.*;
 

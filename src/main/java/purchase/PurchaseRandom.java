@@ -1,6 +1,6 @@
-package PurchaseExecution;
+package purchase;
 
-import Model.Property;
+import model.Property;
 
 import java.util.Random;
 

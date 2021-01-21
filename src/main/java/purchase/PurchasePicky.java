@@ -1,6 +1,6 @@
-package PurchaseExecution;
+package purchase;
 
-import Model.Property;
+import model.Property;
 
 public class PurchasePicky implements Purchase{
     @Override

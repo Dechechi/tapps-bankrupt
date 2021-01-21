@@ -1,12 +1,12 @@
-package Game;
+package game;
 
-import Model.Board;
-import Model.Player;
-import PurchaseExecution.PurchaseCautious;
-import PurchaseExecution.PurchaseInpulsive;
-import PurchaseExecution.PurchasePicky;
-import PurchaseExecution.PurchaseRandom;
-import Util.Dice;
+import model.Board;
+import model.Player;
+import purchase.PurchaseCautious;
+import purchase.PurchaseInpulsive;
+import purchase.PurchasePicky;
+import purchase.PurchaseRandom;
+import util.Dice;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,10 +29,13 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        for(int i = 0; i < 300; i++){
+        int roundsToPlay = 300; // trocar valor para validar diferentes quantidades de partidas
+        for(int i = 0; i < roundsToPlay; i++){
 
             Board board = new Board("gameConfig.txt");
-            Dice dice = new Dice(1,6);
+            Dice dice = new Dice(1,6); // altere os valores dos dados para jogr com dados com mais faces (Valores inclusivos)
+
+            //Nesse campo pode-se criar quantos jogadores desejar, basta depois adiciona-los na lista de players
 
             Player player1 = new Player("Player1", new PurchaseInpulsive());
             Player player2 = new Player("Player2", new PurchasePicky());
@@ -47,7 +50,7 @@ public class Game {
 
             Round round = new Round(board, dice, players);
 
-            round.playRound(false);
+            round.playRound(false); // coloque true para ter um print com o status final de cada partida executada
             winners.add(round.getWinner().getName());
             rounds.add(round.roundsQtd);
         }
