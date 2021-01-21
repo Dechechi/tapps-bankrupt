@@ -60,6 +60,7 @@ public class Game {
         int average = calcAverage(rounds);
         int ocurrancies = Collections.frequency(rounds, 1000);
 
+        System.out.println("Resultados para a simulação de 300 partidas!");
         System.out.println("Numero de vitorias do Player1 (Comportamento impulsivo).....: " + p1Ocurrancies);
         System.out.println("Numero de vitorias do Player2 (Comportamento exigente)......: " + p2Ocurrancies);
         System.out.println("Numero de vitorias do Player3 (Comportamento cauteloso).....: " + p3Ocurrancies);
